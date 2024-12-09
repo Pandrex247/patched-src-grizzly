@@ -720,7 +720,7 @@ public abstract class HttpCodecFilter extends HttpBaseFilter implements Monitori
                     return false;
                 }
                 
-                if(parsingState.subState == 0 && parsingState.start== -1) {
+                if (parsingState.subState == 0 && parsingState.start== -1) {
                     return true;
                 }
 
@@ -1010,7 +1010,7 @@ public abstract class HttpCodecFilter extends HttpBaseFilter implements Monitori
                 parsingState.subState++;
             }
             case 1: { // parse header name
-                if(!parseHeaderName(httpHeader, mimeHeaders, parsingState, input)){
+                if (!parseHeaderName(httpHeader, mimeHeaders, parsingState, input)){
                     return false;
                 } 
                 
